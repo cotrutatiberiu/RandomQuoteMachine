@@ -1,34 +1,38 @@
-function Quote(quote,author){
-    this.string=quote;
-    this.author=author;
-    this.printQuote=function(){
-        document.write(this.string);
-        document.write(this.author);
-    }
+function Quote(quote, author) {
+  this.string = quote;
+  this.author = author;
 }
 
-var quote1=new Quote("a","b");
-var quote2=new Quote("w","z");
-var quote3=new Quote("e","x");
-var quote4=new Quote("r","c");
-var quote5=new Quote("t","v");
-var quote6=new Quote("y","b");
-var quote7=new Quote("u","n");
-var quote8=new Quote("i","m");
+var quote1 = new Quote("a", "b");
+var quote2 = new Quote("w", "z");
+var quote3 = new Quote("e", "x");
+var quote4 = new Quote("r", "c");
 
+function printStuff() {
+  var arOb = [quote1, quote2, quote3, quote4];
 
-function makeArray(){
-    var quoteArr=[quote1,quote2,quote3];
-    for(var i=0;i<quoteArr.length;i++){
-        document.write(quoteArr[i].)
+  for (var i = 0; i < arOb.length; i++) {
+    var print = "";
+    for (var cp in arOb[i]) {
+      print = print + " " + arOb[i][cp] + "<br></br>";
     }
+    document.write(print);
+  }
 }
 
+function randomQuote() {
+    
+  //Add objects to an array
+  var arOb = [];
+  for (var k = 1; k <= 4; k++) {
+    arOb.push(window["quote" + k]);
+  }
+  document.write(arOb[0].author);
 
-function randomQuote(){
-    var c=Math.random();
-    var d=Math.floor(c);
-    document.write(c +"\n"+ d);
+  //Random number picker
+  var c = Math.random() * (arOb.length - 1 + 1) + 1;
+  var d = Math.floor(c);
+  document.write();
 }
 
 randomQuote();
