@@ -1,0 +1,11 @@
+#app{
+    background-color: white;
+    color: rgb(98, 0, 255);
+    width: 400px;
+    text-align: center;
+    position: relative;
+    top: 100px;
+}
+body{
+    background-color: rgb(255, 136, 0);
+}
